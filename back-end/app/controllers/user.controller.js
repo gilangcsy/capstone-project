@@ -2,6 +2,8 @@ const db = require('../models');
 const User = db.user;
 const Op = db.Sequelize.Op;
 
+const bcrypt = require("bcrypt");
+
 
 exports.read = (req, res) => {
 	const { id } = req.query;
