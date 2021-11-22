@@ -3,6 +3,27 @@ const Post = db.post;
 const Op = db.Sequelize.Op;
 const slugify = require('slugify');
 
+// Import the filesystem module
+const fs = require('fs');
+
+//Import and setting up multer
+const multer = require('multer')
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './uploads/images/posts/')
+    },
+    filename: function (req, file, cb) {
+        let extArray = file.mimetype.split("/");
+        let extension = extArray[extArray.length - 1];
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9) + '.' + extension
+        cb(null, file.fieldname + '-' + uniqueSuffix)
+    }
+})
+
+exports.upload = multer({
+    storage: storage
+})
+
 exports.read = (req, res) => {
 	const { id } = req.query;
 	Post.findAll({
@@ -33,16 +54,15 @@ exports.read = (req, res) => {
 
 exports.create = (req, res) => {
 	const PostId = 'USR-' + Math.random().toString(36).substr(2, 9);
-	const { title, slug, description, type, thumbnail, UserId } = req.body;
-    const hashedPassword = bcrypt.hashSync(password, 10);
+	const { title, description, type, UserId } = req.body;
 
 	const post = {
 		id: PostId,
 		title: title,
-		slug: slugify(slug),
+		slug: slugify(title),
 		description: description,
 		type: type,
-		thumbnail: thumbnail,
+		thumbnail: req.file.filename,
 		UserId: UserId
 	}
 
