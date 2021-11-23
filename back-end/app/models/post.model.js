@@ -18,7 +18,10 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         type: {
-            type: Sequelize.TEXT,
+            type: Sequelize.STRING,
+        },
+        category: {
+            type: Sequelize.STRING,
         },
         thumbnail: {
             type: Sequelize.STRING,

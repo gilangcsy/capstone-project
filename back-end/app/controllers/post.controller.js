@@ -53,15 +53,16 @@ exports.read = (req, res) => {
 }
 
 exports.create = (req, res) => {
-	const PostId = 'USR-' + Math.random().toString(36).substr(2, 9);
-	const { title, description, type, UserId } = req.body;
+	const PostId = 'PST-' + Math.random().toString(36).substr(2, 9);
+	const { title, description, type, category ,UserId } = req.body;
 
 	const post = {
 		id: PostId,
 		title: title,
-		slug: slugify(title),
+		slug: slugify(title.toLowerCase()),
 		description: description,
 		type: type,
+		category: category,
 		thumbnail: req.file.filename,
 		UserId: UserId
 	}
@@ -85,6 +86,13 @@ exports.delete = (req, res) => {
 	Post.findByPk(id)
 		.then(result => {
 			if (result) {
+				const path = process.cwd() + '/uploads/images/posts/' + result.thumbnail
+				fs.unlink(path, (err) => {
+					if (err) {
+						console.error(err)
+						return
+					}
+				})
 				Post.destroy({
 					where: {
 						id: id
@@ -113,10 +121,28 @@ exports.delete = (req, res) => {
 
 exports.update = (req, res) => {
 	const id = req.params.id;
+	const { title, description, type, category ,UserId } = req.body;
 	Post.findByPk(id)
 		.then(result => {
 			if (result) {
-				Post.update(req.body, {
+				if (req.file) {
+					const path = process.cwd() + '/uploads/images/posts/' + result.thumbnail
+					fs.unlink(path, (err) => {
+						if (err) {
+							console.error(err)
+							return
+						}
+					})
+					var postValue = {
+						title: title,
+						slug: slugify(title.toLowerCase()),
+						description: description,
+						type: type,
+						category: category,
+						UserId: UserId
+					}
+				}
+				Post.update(postValue || req.body, {
 					where: {
 						id: id
 					}
