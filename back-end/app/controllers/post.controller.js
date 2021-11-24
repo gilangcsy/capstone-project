@@ -25,12 +25,15 @@ exports.upload = multer({
 })
 
 exports.read = (req, res) => {
-	const { id } = req.query;
+	const { id, category } = req.query;
 	Post.findAll({
 		where: {
 			[Op.or]: [{
 				id: {
 					[Op.like]: id ? `%${id}%` : `%%`
+				},
+				category: {
+					[Op.like]: category ? `%${category}%` : `%%`
 				},
 			}]
 		},
@@ -54,7 +57,7 @@ exports.read = (req, res) => {
 
 exports.create = (req, res) => {
 	const PostId = 'PST-' + Math.random().toString(36).substr(2, 9);
-	const { title, description, type, category ,UserId } = req.body;
+	const { title, description, type, category, UserId } = req.body;
 
 	const post = {
 		id: PostId,
