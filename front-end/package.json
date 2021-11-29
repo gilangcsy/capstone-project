@@ -27,7 +27,6 @@
     "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
-    "boxicons": "^2.0.9",
     "regenerator-runtime": "^0.13.9"
   }
 }
