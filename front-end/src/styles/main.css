@@ -16,7 +16,7 @@
 
   --h1-font-size: 1.5rem;
   --normal-font-size: 0.938rem;
-  --tiny-font-size: 0.625rem;
+  --tiny-font-size: 0.813rem;
 
   @media screen and (min-width: 968px) {
     --h1-font-size: 2.5rem;
@@ -62,7 +62,6 @@ img {
 
 .section__title {
   font-size: var(--h1-font-size);
-  color: var(--tiny-font-size);
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -137,11 +136,30 @@ header {
 }
 
 .nav__name {
-  font-size: var(--tiny-font-size);
+  font-size: var(--normal-font-size);
+  font-weight: 400;
 }
 
 .nav__icon {
   font-size: 1.5rem;
+}
+
+button {
+  font-size: var(--normal-font-size);
+  padding: 10px;
+  border: 0;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.login__btn {
+  background-color: transparent;
+}
+
+.register__btn {
+  background-color: var(--firts-color-alt);
+  color: var(--container-color);
+  border-radius: 30px;
 }
 
 /* responsive */

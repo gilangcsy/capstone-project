@@ -37,10 +37,18 @@ class AppBar extends HTMLElement {
             </li>
           </ul>
         </div>
-        <img src="${profil}" class="nav__img" alt="profil" />
+
+      <div class="menu__login">
+        <button class="login__btn" id="login-btn">Masuk</button>
+        <button class="register__btn" id="register-btn">Daftar</button>
+      </div>
       </nav>
         `;
   }
 }
 
 customElements.define('app-bar', AppBar);
+// dipake kalau user sudah login
+{
+  /* <img src="${profil}" class="nav__img" alt="profil" /> */
+}
