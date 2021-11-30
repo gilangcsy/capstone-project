@@ -1,30 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-  --header-height: 3rem;
+  --header-height: 3.5rem;
 
   /* color */
-  --firts-color: #565b93;
-  --firts-color-alt: #3f869e;
-  --title-color: #405768;
+  --firts-color: #2978e3;
+  --firts-color-alt: #14375e;
+  --title-color: #14375e;
   /* --text-color: #eef0f8; */
-  --body-color: #eef0f8;
+  --body-color: #fff;
   --container-color: #f3f7fc;
 
   /* font */
   --body-font: 'Poppins', sans-serif;
-
+  --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
   --normal-font-size: 0.938rem;
-  --tiny-font-size: 0.813rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
-  @media screen and (min-width: 968px) {
-    --h1-font-size: 2.5rem;
-    --normal-font-size: 1rem;
-  }
+  /* font weight */
+  --font-thin: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
 
   --z-tooltip: 10;
   --z-fixed: 100;
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
 }
 
 /* base */
@@ -36,6 +51,14 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
 }
 
 body {
@@ -55,9 +78,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
 
 .section {
-  padding: 4.5rem 0 2rem;
+  padding: 5.5rem 0 1rem;
 }
 
 .section__title {
@@ -66,13 +94,17 @@ img {
   margin-bottom: 1.5rem;
 }
 
-.section__height {
+/* .section__height {
   height: 100vh;
-}
+} */
 
 .container {
   max-width: 968px;
-  margin: 0 1rem;
+  margin: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
 }
 
 header {
@@ -80,103 +112,22 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--container-color);
+  background-color: var(--body-color);
   z-index: var(--z-fixed);
-}
-
-/* navbar */
-
-.nav {
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav__img {
-  width: 32px;
-  border-radius: 50%;
-}
-
-.nav__logo {
-  color: var(--firts-color-alt);
-  font-weight: 600;
-}
-
-@media screen and (max-width: 768px) {
-  .nav__menu {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: var(--container-color);
-    width: 100%;
-    height: 4rem;
-    padding: 0 1rem;
-    display: grid;
-    align-content: center;
-    border-radius: 1.25rem 1.25rem 0 0;
-    transition: 0.4s;
-  }
-}
-
-.nav__list,
-.nav__link {
-  display: flex;
-}
-.nav__link {
-  flex-direction: column;
-  align-items: center;
-  row-gap: 0.25rem;
-  color: var(--title-color);
-  font-weight: 600;
-}
-
-.nav__list {
-  justify-content: space-around;
-}
-
-.nav__name {
-  font-size: var(--normal-font-size);
-  font-weight: 400;
-}
-
-.nav__icon {
-  font-size: 1.5rem;
-}
-
-button {
-  font-size: var(--normal-font-size);
-  padding: 10px;
-  border: 0;
-  color: var(--title-color);
-  cursor: pointer;
-}
-
-.login__btn {
-  background-color: transparent;
-}
-
-.register__btn {
-  background-color: var(--firts-color-alt);
-  color: var(--container-color);
-  border-radius: 30px;
 }
 
 /* responsive */
 
 /* for Minimalist Device */
 @media screen and (max-width: 320px) {
-  .nav__name {
-    display: none;
+  .container {
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 
 /* for Medium Device */
 @media screen and (min-width: 576px) {
-  .nav__list {
-    justify-content: center;
-    column-gap: 3rem;
-  }
 }
 @media screen and (min-width: 768px) {
   body {
@@ -185,21 +136,20 @@ button {
   .section {
     padding: 7rem 0 2rem;
   }
-
-  .nav {
-    height: 4.5rem;
-  }
-  .nav__img {
-    display: none;
-  }
-  .nav__icon {
-    display: none;
-  }
 }
 
-@media screen and (min-width: 1024px) {
+/* for large Device */
+@media screen and (min-width: 992px) {
   .container {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .section {
+    padding: 8rem 0 1rem;
+  }
+
+  .section__title {
+    font-size: var(--h1-font-size);
   }
 }
