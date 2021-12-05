@@ -16,6 +16,11 @@
   font-weight: 600;
 }
 
+.login__icon {
+  font-size: 32px;
+  color: var(--firts-color-alt);
+}
+
 @media screen and (max-width: 768px) {
   .nav__menu {
     position: fixed;
@@ -29,6 +34,9 @@
     align-content: center;
     border-radius: 1.25rem 1.25rem 0 0;
     transition: 0.4s;
+  }
+  .menu__login {
+    display: none;
   }
 }
 
@@ -85,6 +93,7 @@
     column-gap: 3rem;
   }
 }
+
 @media screen and (min-width: 768px) {
   .nav {
     height: 4.5rem;
@@ -95,9 +104,9 @@
   .nav__icon {
     display: none;
   }
-  /* .menu__login {
+  .login__icon {
     display: none;
-  } */
+  }
 }
 
 @media screen and (min-width: 1024px) {

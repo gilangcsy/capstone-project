@@ -14,14 +14,17 @@
 
 .home__title {
   font-size: var(--big-font-size);
+  color: var(--title-color);
   line-height: 140%;
 }
 
 .home__sub-title {
   margin-bottom: 1rem;
+  color: var(--title-color);
 }
 .home__description {
   margin-bottom: 2.5rem;
+  color: var(--title-color);
 }
 
 .button {
@@ -78,9 +81,9 @@
 
 /* for large Device */
 @media screen and (min-width: 992px) {
-  .home {
+  /* .home {
     padding: 13rem 0 5rem;
-  }
+  } */
   .home__img {
     width: 400px;
   }
