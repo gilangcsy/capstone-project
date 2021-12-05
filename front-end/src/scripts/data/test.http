@@ -1,0 +1,13 @@
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+    "fullName": "Alexander Albon",
+    "email": "alexalb1889@gmail.com",
+    "password": "password",
+    "address": "Jl. Kemerdekaan 12",
+    "gender": "Men",
+    "birthOfDate": "2001-05-03",
+    "placeOfBirth": "Bekasi",
+    "university": "UPH"
+}
