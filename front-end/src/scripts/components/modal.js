@@ -5,13 +5,19 @@ class Modal extends HTMLElement {
 
   render() {
     this.innerHTML = `
+
+    <!-- Register Modal -->
+
     <div class="container micromodal-slide" id="modal-1"  data-micromodal-close>
     <div class="modal__bg" tabindex="1">
       <div class="modal__content" role="dialog" aria-labelledby="modal-1-title" >
         <div id="close-btn" class="close__modal" tabindex="-1" data-micromodal-close>
           <i class="bx bx-x-circle"></i>
         </div>
-        <div class="modal__title" id="modal-1-title" tabindex="-1">Daftar</div>
+        <div id="modal-1-title" tabindex="-1">
+        <h2 class="modal__title">Daftar</h2>
+        <p>Sudah punya Akun ? <a href="#">masuk disini.</a></p>
+        </div>
         <form action="#" id="modal-1-content">
           <div class="user__details">
             <div class="input__box">
@@ -29,7 +35,7 @@ class Modal extends HTMLElement {
             <div class="input__box">
               <span class="details">Tanggal Lahir</span>
               <input
-                type="text"
+                type="date"
                 placeholder="Masukkan Tanggal Lahir"
                 required
               />
@@ -42,24 +48,80 @@ class Modal extends HTMLElement {
               <span class="details">Kampus</span>
               <input type="text" placeholder="Masukkan Asal Kampus" required />
             </div>
+            <div class="input__box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Masukkan password" required />
+          </div>
+          <div class="input__box">
+            <span class="details">Konfirmasi Password</span>
+            <input
+              type="password"
+              placeholder="Masukkan konfirmasi password"
+              required
+            />
           </div>
           <div class="gender__details">
-            <span class="gender__title">Gender</span>
-            <div class="category">
-              <label for="">
-                <span class="dot one"></span>
-                <span class="gender">Laki-laki</span>
-              </label>
-              <label for="">
-                <span class="dot one"></span>
-                <span class="gender">Perempuan</span>
-              </label>
-            </div>
+          <span class="gender__title">Jenis Kelamin</span>
+          <div class="category">
+            <label class="man__label" 
+              >Laki-Laki
+              <input type="radio" checked="checked" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label
+              >Perempuan
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
           </div>
-          <a href="" class="button"> daftar</a>
+          </div>
+          </div>
+          <a href="" class="button">daftar</a>
         </form>
       </div>
     </div>
+</div>
+
+<!-- Login Modal -->
+
+<div class="container micromodal-slide" id="modal-2" data-micromodal-close>
+<div class="modal__bg" tabindex="1">
+  <div
+    class="modal__content"
+    role="dialog"
+    aria-labelledby="modal-1-title"
+  >
+    <div
+      id="close-btn"
+      class="close__modal"
+      tabindex="-1"
+      data-micromodal-close
+    >
+      <i class="bx bx-x-circle"></i>
+    </div>
+    <div id="modal-1-title" tabindex="-1">
+      <h2 class="modal__title">Login</h2>
+      <p>Belum punya Akun ? <a href="#">Daftar disini.</a></p>
+    </div>
+    <form action="#" id="modal-2-content">
+      <div class="user__details__login">
+        <div class="input__box__login">
+          <span class="details">Email</span>
+          <input type="email" placeholder="Masukkan Email" required />
+        </div>
+        <div class="input__box__login">
+          <span class="details">Password</span>
+          <input
+            type="password"
+            placeholder="Masukkan password"
+            required
+          />
+        </div>
+      </div>
+      <a href="" class="button">Login</a>
+    </form>
+  </div>
+</div>
 </div>
           `;
   }

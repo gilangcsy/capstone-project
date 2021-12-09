@@ -39,7 +39,7 @@ class AppBar extends HTMLElement {
       </div>
 
       <div class="menu__login">
-        <button class="login__btn" id="login-btn">Masuk</button>
+        <button class="login__btn" id="login-btn" data-micromodal-trigger="modal-2">Masuk</button>
         <button
           class="register__btn"
           id="register-btn"
