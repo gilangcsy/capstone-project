@@ -2,7 +2,7 @@ POST http://localhost:3000/api/v1/users
 Content-Type: application/json
 
 {
-    "fullName": "Alexander Albon",
+    "fullName": "Alexander",
     "email": "alexalb1889@gmail.com",
     "password": "password",
     "address": "Jl. Kemerdekaan 12",
