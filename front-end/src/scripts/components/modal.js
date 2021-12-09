@@ -22,40 +22,42 @@ class Modal extends HTMLElement {
           <div class="user__details">
             <div class="input__box">
               <span class="details">Nama Lengkap</span>
-              <input type="text" placeholder="Masukkan Nama Lengkap" required />
+              <input type="text" id="nama" placeholder="Masukkan Nama Lengkap" required />
             </div>
             <div class="input__box">
               <span class="details">Email</span>
-              <input type="email" placeholder="Masukkan Email" required />
+              <input type="email" id="email" placeholder="Masukkan Email" required />
             </div>
             <div class="input__box">
               <span class="details">Alamat</span>
-              <input type="text" placeholder="Masukkan alamat" required />
+              <input type="text" id="alamat" placeholder="Masukkan alamat" required />
             </div>
             <div class="input__box">
               <span class="details">Tanggal Lahir</span>
               <input
                 type="date"
+                id="tanggal"
                 placeholder="Masukkan Tanggal Lahir"
                 required
               />
             </div>
             <div class="input__box">
               <span class="details">Tempat Lahir</span>
-              <input type="text" placeholder="Masukkan Tempat Lahir" required />
+              <input type="text" id="lahir" placeholder="Masukkan Tempat Lahir" required />
             </div>
             <div class="input__box">
               <span class="details">Kampus</span>
-              <input type="text" placeholder="Masukkan Asal Kampus" required />
+              <input type="text" id="kampus" placeholder="Masukkan Asal Kampus" required />
             </div>
             <div class="input__box">
             <span class="details">Password</span>
-            <input type="password" placeholder="Masukkan password" required />
+            <input type="password" id="password" placeholder="Masukkan password" required />
           </div>
           <div class="input__box">
             <span class="details">Konfirmasi Password</span>
             <input
               type="password"
+              id="confpassword"
               placeholder="Masukkan konfirmasi password"
               required
             />
@@ -65,18 +67,18 @@ class Modal extends HTMLElement {
           <div class="category">
             <label class="man__label" 
               >Laki-Laki
-              <input type="radio" checked="checked" name="radio" />
+              <input type="radio" name="gender" />
               <span class="checkmark"></span>
             </label>
             <label
               >Perempuan
-              <input type="radio" name="radio" />
+              <input type="radio" name="gender" value="" checked="checked" />
               <span class="checkmark"></span>
             </label>
           </div>
           </div>
           </div>
-          <a href="" class="button">daftar</a>
+          <button class="button" id="add-user">Daftar</button>
         </form>
       </div>
     </div>

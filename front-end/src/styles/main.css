@@ -43,7 +43,9 @@
 }
 
 /* base */
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -106,6 +108,7 @@ button {
 
 .grid {
   display: grid;
+  gap: 1.5rem;
 }
 
 header {
@@ -115,6 +118,10 @@ header {
   width: 100%;
   background-color: var(--body-color);
   z-index: var(--z-fixed);
+}
+
+.event {
+  margin-bottom: 4rem;
 }
 
 /* responsive */
