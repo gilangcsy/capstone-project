@@ -19,6 +19,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "micromodal": "^0.4.10",
+    "mixitup": "^3.3.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.64.4",
     "webpack-bundle-analyzer": "^4.5.0",
