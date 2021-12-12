@@ -8,7 +8,7 @@
 }
 
 .home__img {
-  width: 200px;
+  /* width: 200px; */
   justify-self: center;
 }
 
@@ -54,7 +54,7 @@
 /* for Minimalist Device */
 @media screen and (max-width: 320px) {
   .home__img {
-    width: 200px;
+    width: 300px;
   }
 
   .home__title {
@@ -63,7 +63,15 @@
 }
 
 /* for Medium Device */
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
+  .home__img {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home__img {
+    width: 500px;
+  }
 }
 @media screen and (min-width: 768px) {
   .home__container {
@@ -74,7 +82,6 @@
     padding: 10rem 0 5rem;
   }
   .home__img {
-    width: 300px;
     order: 1;
   }
 }
@@ -85,7 +92,7 @@
     padding: 13rem 0 5rem;
   } */
   .home__img {
-    width: 400px;
+    width: 500px;
   }
   .home__description {
     padding-right: 7rem;

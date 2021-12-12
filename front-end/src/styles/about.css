@@ -1,0 +1,38 @@
+.about__description {
+  text-align: center;
+}
+
+.about__top {
+  padding-bottom: 5rem;
+}
+.about__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+.about__description {
+  color: var(--title-color);
+}
+
+@media screen and (min-width: 576px) {
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .about__description {
+    text-align: initial;
+  }
+  .about__title {
+    text-align: inherit;
+  }
+  .about__img {
+    order: -1;
+  }
+  .about__img__bot {
+    order: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__container {
+    margin-bottom: 4rem;
+  }
+}

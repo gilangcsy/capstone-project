@@ -10,7 +10,7 @@ class Event extends HTMLElement {
   render() {
     this.innerHTML = `
     <section class="section container" id="event">
-      <h2 class="section__title">Lomba & Event Populer</h2>
+      <h2 class="section__title title__lomba">Lomba & Event Populer</h2>
 
       <div class="event__nav">
         <span class="event__item" data-filter="all">All</span>

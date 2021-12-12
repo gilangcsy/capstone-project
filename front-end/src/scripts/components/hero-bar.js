@@ -15,7 +15,7 @@ class Hero extends HTMLElement {
       alt="hero image"
     />
     <div class="home__data">
-      <h1 class="home__title">Bingung Cari Informasi Seputar Lomba?</h1>
+      <h1 class="home__title">Bingung Cari Informasi Lomba?</h1>
       <h2 class="home__sub-title">Cari Disini Aja !</h2>
       <p class="home__description">
         Dapatkan informasi seputar dunia Lomba secara terupdate dari kami

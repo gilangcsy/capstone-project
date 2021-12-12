@@ -69,8 +69,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
 }
-
-ul {
+li {
   list-style: none;
 }
 a {
