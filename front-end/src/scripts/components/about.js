@@ -1,4 +1,4 @@
-import heroImage from '../../public/image/hero2.png';
+import heroImage1 from '../../public/image/hero2.png';
 import heroImage2 from '../../public/image/hero3.png';
 
 class About extends HTMLElement {
@@ -21,7 +21,7 @@ class About extends HTMLElement {
             aperiam!
           </p>
         </div>
-        <img src="${heroImage}" class="about__img home__img" alt="hero about" />
+        <img src="${heroImage1}" class="about__img home__img" alt="hero about" />
       </div>
 
       <div class="about__container grid">

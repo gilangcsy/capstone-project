@@ -12,7 +12,7 @@ class AppBar extends HTMLElement {
       <div class="nav__menu" id="nav__menu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#home" class="nav__link">
+            <a href="#/home" class="nav__link">
               <i class="bx bx-home-alt nav__icon"></i>
               <span class="nav__name">Home</span>
             </a>

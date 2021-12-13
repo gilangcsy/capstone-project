@@ -8,7 +8,7 @@ class Contact extends HTMLElement {
     <section class="contact section container" id="contact">
     <div class="contact__container grid">
       <div class="contact__content">
-        <h2 class="section__title">Hubungi Kami</h2>
+        <h2 class="section__title contact__title">Hubungi Kami</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
           odit blanditiis libero. Voluptatum, quod ullam!

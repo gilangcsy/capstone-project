@@ -21,7 +21,7 @@ class Hero extends HTMLElement {
         Dapatkan informasi seputar dunia Lomba secara terupdate dari kami
         melalui web Lombaku.
       </p>
-      <a href="" class="button button--flex">
+      <a href="#/search" class="button button--flex">
       Temukan <i class="bx bx-right-arrow-circle button__icon"></i
     ></a>
     </div>

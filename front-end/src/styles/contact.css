@@ -19,6 +19,9 @@
   font-weight: initial;
   color: #000;
 }
+.contact__title {
+  color: var(--title-color);
+}
 
 @media screen and (min-width: 576px) {
   .contact__container {
@@ -27,6 +30,9 @@
   }
 
   .contact__description {
+    text-align: initial;
+  }
+  .contact__title {
     text-align: initial;
   }
 }

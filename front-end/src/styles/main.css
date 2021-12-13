@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('navbar.css');
+@import url('hero.css');
+@import url('modal-costum.css');
+@import url('modal.css');
+@import url('event.css');
+@import url('about.css');
+@import url('contact.css');
+@import url('footer.css');
 
 :root {
   --header-height: 3.5rem;
@@ -121,6 +129,39 @@ header {
 
 .event {
   margin-bottom: 4rem;
+}
+
+/* scroll header */
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* scroll up */
+
+.scrollup {
+  position: fixed;
+  background-color: var(--firts-color-alt);
+  right: 1rem;
+  bottom: -20%;
+  display: inline-flex;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  z-index: 100;
+  opacity: 0.8;
+  transition: 0.4s;
+}
+.scrollup:hover {
+  background-color: var(--firts-color-alt);
+  opacity: 1;
+}
+
+.scrollup__icon {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.show-scroll {
+  bottom: 5rem;
 }
 
 /* responsive */

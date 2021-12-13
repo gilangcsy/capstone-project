@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "ayub",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.0",
