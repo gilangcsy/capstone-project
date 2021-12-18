@@ -1,10 +1,18 @@
+import ApiSource from '../../data/api-source';
+import lomba from '../templates/lomba';
+
 const Search = {
-  async AfterRender() {
+  async render() {
     return `
-            <section class="section container">
-                <h2>Search Bar</h2>
-            </section>
+    <search-bar></search-bar>
         `;
+  },
+  async afterRender() {
+    const data = await ApiSource.getPost();
+    const itemContainer = document.querySelector('.search__container');
+    data.data.forEach((item) => {
+      itemContainer.innerHTML += lomba(item);
+    });
   },
 };
 

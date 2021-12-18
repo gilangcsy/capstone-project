@@ -11,7 +11,7 @@ class Modal extends HTMLElement {
     <div class="container micromodal-slide" id="modal-1"  data-micromodal-close>
     <div class="modal__bg" tabindex="1">
       <div class="modal__content" role="dialog" aria-labelledby="modal-1-title" >
-        <div id="close-btn" class="close__modal" tabindex="-1" data-micromodal-close>
+        <div id="close-btn-register" class="close__modal" tabindex="-1" data-micromodal-close>
           <i class="bx bx-x-circle"></i>
         </div>
         <div id="modal-1-title" tabindex="-1">
@@ -94,7 +94,7 @@ class Modal extends HTMLElement {
     aria-labelledby="modal-1-title"
   >
     <div
-      id="close-btn"
+      id="close-btn-login"
       class="close__modal"
       tabindex="-1"
       data-micromodal-close

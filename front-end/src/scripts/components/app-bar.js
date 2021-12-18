@@ -41,14 +41,14 @@ class AppBar extends HTMLElement {
       <div class="menu__login">
         <button class="login__btn" id="login-btn" data-micromodal-trigger="modal-2">Masuk</button>
         <button
-          class="register__btn"
+          class="register__btn register-btn"
           id="register-btn"
           data-micromodal-trigger="modal-1"
         >
           Daftar
         </button>
       </div>
-      <i class="bx bxs-arrow-from-left login__icon" data-micromodal-trigger="modal-1"></i>
+      <i class="bx bxs-arrow-from-left login__icon" id="register-btn"></i>
     </nav>
         `;
   }

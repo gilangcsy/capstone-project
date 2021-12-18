@@ -3,7 +3,7 @@ import MicroModal from 'micromodal';
 import mixitup from 'mixitup';
 import './components/app-bar';
 // import './components/hero-bar';
-// import './components/modal';
+import './components/modal';
 // import './components/event-bar';
 // import './components/about';
 // import './components/contact';
@@ -42,12 +42,15 @@ function scrollUp() {
 window.addEventListener('scroll', scrollUp);
 
 // singgle app
-const app = new App({ content: document.querySelector('#maincontent') });
-//   ({
-//   button: document.querySelector('#hamburgerButton'),
-//   drawer: document.querySelector('#navigationDrawer'),
-//   content: document.querySelector('#mainContent'),
-// });
+const app = new App({
+  buttonLogin: document.querySelector('#login-btn'),
+  buttonRegister: document.querySelector('.register-btn'),
+  buttonCloseRegister: document.querySelector('#close-btn-register'),
+  buttonCloseLogin: document.querySelector('#close-btn-login'),
+  modalRegister: document.querySelector('#modal-1'),
+  modalLogin: document.querySelector('#modal-2'),
+  content: document.querySelector('#maincontent'),
+});
 
 window.addEventListener('hashchange', () => {
   app.renderPage();

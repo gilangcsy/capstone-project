@@ -1,22 +1,43 @@
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
+import ModalInitiator from '../utils/modal-initiator';
+
+// components
+import '../components/hero-bar';
+import '../components/event-bar';
+import '../components/about';
+import '../components/contact';
+import '../components/search';
 
 class App {
-  //   constructor() {}
-  constructor({ content }) {
-    // this._buttonMenu = buttonMenu;
-    // this._buttonClose = buttonClose;
-    // this._drawer = drawer;
+  constructor({
+    buttonLogin,
+    buttonRegister,
+    buttonCloseRegister,
+    buttonCloseLogin,
+    modalRegister,
+    modalLogin,
+    content,
+  }) {
+    this._buttonLogin = buttonLogin;
+    this._buttonCloseRegister = buttonCloseRegister;
+    this._buttonCloseLogin = buttonCloseLogin;
+    this._buttonRegister = buttonRegister;
+    this._modalRegister = modalRegister;
+    this._modalLogin = modalLogin;
     this._content = content;
 
     this._initialAppShell();
   }
 
   _initialAppShell() {
-    DrawerInitiator.init({
-      //   buttonMenu: this._buttonMenu,
-      //   buttonClose: this._buttonClose,
-      //   drawer: this._drawer,
+    ModalInitiator.init({
+      buttonLogin: this._buttonLogin,
+      buttonRegister: this._buttonRegister,
+      buttonCloseRegister: this._buttonCloseRegister,
+      buttonCloseLogin: this._buttonCloseLogin,
+      modalRegister: this._modalRegister,
+      modalLogin: this._modalLogin,
       content: this._content,
     });
   }

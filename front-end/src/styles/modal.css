@@ -1,12 +1,8 @@
-/* .modal__slide {
-  display: none;
-} */
-
 .micromodal-slide {
   display: none;
 }
 
-.micromodal-slide.is-open {
+.micromodal-slide .is-open {
   display: block;
 }
 
