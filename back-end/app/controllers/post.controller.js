@@ -25,15 +25,15 @@ exports.upload = multer({
 })
 
 exports.read = (req, res) => {
-	const { id, category } = req.query;
+	const { id, title } = req.query;
 	Post.findAll({
 		where: {
 			[Op.or]: [{
 				id: {
 					[Op.like]: id ? `%${id}%` : `%%`
 				},
-				category: {
-					[Op.like]: category ? `%${category}%` : `%%`
+				title: {
+					[Op.like]: title ? `%${title}%` : `%%`
 				},
 			}]
 		},
