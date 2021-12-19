@@ -13,9 +13,10 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const data = await ApiSource.getDetail(url.id);
-    // const detail = data;
     const detailContainer = document.querySelector('.detail');
-    detailContainer.innerHTML = postDetail(data);
+    data.data.forEach((item) => {
+      detailContainer.innerHTML = postDetail(item);
+    });
   },
 };
 

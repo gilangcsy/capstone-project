@@ -9,7 +9,7 @@ class Search extends HTMLElement {
     <div class="search__input">
     <div class="search_box">
       <div class="search_field">
-        <input type="text" class="input" placeholder="Search">
+        <input type="text" class="input" placeholder="Search" id="searchPost">
         <i class='bx bx-search-alt search__icon'></i>
       </div>
       <div class="dropdown">
@@ -31,3 +31,6 @@ class Search extends HTMLElement {
 }
 
 customElements.define('search-bar', Search);
+
+//searchPost - searchbar
+//.search__container - charactter

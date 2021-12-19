@@ -1,5 +1,3 @@
-import img1 from '../../public/image/event1.jpg';
-
 class Event extends HTMLElement {
   connectedCallback() {
     this.render();

@@ -7,6 +7,11 @@ class ApiLombaku {
   }
   static async getDetail(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
+    console.log(response);
+    return response.json();
+  }
+  static async searchPost(title) {
+    const response = await fetch(API_ENDPOINT.SEARCH(title));
     return response.json();
   }
 }
