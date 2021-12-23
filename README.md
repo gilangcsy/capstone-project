@@ -72,9 +72,10 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Buat database di xampp dengan nama "capstone" tanpa tanda petik.
+5. Jalankan back-end
+   ```sh
+   node server
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
