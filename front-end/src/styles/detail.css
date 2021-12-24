@@ -1,0 +1,30 @@
+.detail__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.detail__description {
+  margin: 0.5rem 0;
+  font-size: var(--normal-font-size);
+}
+
+.detail__user {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+}
+.detail__category {
+  padding: 6px;
+  background-color: var(--title-color);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .detail__container {
+    grid-template-columns: repeat(2, 1fr);
+    /* align-items: center; */
+  }
+  .detail__img {
+    order: -1;
+  }
+}
