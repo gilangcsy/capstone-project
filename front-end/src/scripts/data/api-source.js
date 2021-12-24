@@ -75,6 +75,6 @@ class ApiLombaku {
 }
 const showResponseMessage = (message = 'Check your internet connection') => {
   alert(message);
-  // window.location.replace('http://localhost:8080/');
+  window.location.replace('http://localhost:8080/');
 };
 export default ApiLombaku;
