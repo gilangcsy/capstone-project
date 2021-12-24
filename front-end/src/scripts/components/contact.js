@@ -10,8 +10,7 @@ class Contact extends HTMLElement {
       <div class="contact__content">
         <h2 class="section__title contact__title">Hubungi Kami</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
-          odit blanditiis libero. Voluptatum, quod ullam!
+          hubungi kami jika kamu punya kendala dalam mencari lomba, syarat dan keritik kami tampung juga loh.
         </p>
       </div>
 
@@ -24,12 +23,12 @@ class Contact extends HTMLElement {
           <span class="contact__information">lombaku@dicoding.com</span>
         </li>
         <li class="contact__address">
-          Location: <span class="contact__information">Indonesia</span>
+          Location: <span class="contact__information">Jakarta</span>
         </li>
       </div>
 
       <div class="contact__content">
-        <a href="#" class="button">Hubungi Kami</a>
+        <a href="mailto: lombaku@gmail.com" class="button">Hubungi Kami</a>
       </div>
     </div>
   </section>

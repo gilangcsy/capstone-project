@@ -1,0 +1,46 @@
+.post__title h2 {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+.post__title p {
+  margin-bottom: 0.5rem;
+}
+.post__content {
+  background-color: aliceblue;
+  padding: 1.5rem 1.875rem;
+  border-radius: 1rem;
+}
+
+.form__post__input,
+.tipe__post {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form__post__input :focus,
+.form__post__input :valid {
+  border-color: #a1cafc;
+}
+
+.form__post__input input,
+.tipe__post option,
+.tipe__post {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #dbeafc;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: var(--normal-font-size);
+}
+.form__post-upload {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.post__upload {
+  margin-bottom: 6px;
+}

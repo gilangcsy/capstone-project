@@ -1,50 +1,32 @@
+import ApiSource from '../data/api-source';
+
 function register() {
-  const registerUrl = 'http://localhost:3000/api/v1/users/';
-
-  const addUser = async (user) => {
-    try {
-      const options = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user),
-      };
-
-      const response = await fetch(registerUrl, options);
-      const responseJson = await response.json();
-      showResponseMessage(responseJson.message);
-    } catch (error) {
-      showResponseMessage(error);
-    }
-  };
-  const showResponseMessage = (message = 'Check your internet connection') => {
-    alert(message);
-  };
-
   document.addEventListener('DOMContentLoaded', () => {
-    const fullName = document.querySelector('#nama').value;
-    const email = document.querySelector('#email').value;
-    const hashedPassword = document.querySelector('#password').value;
-    const address = document.querySelector('#alamat').value;
-    const birthOfDate = document.querySelector('#tanggal').value;
-    const placeOfBirth = document.querySelector('#lahir').value;
-    const gender = document.querySelector('input[name="gender"]:checked').value;
-    const university = document.querySelector('#kampus').value;
-    const buttonAdd = document.querySelector('#add-user').value;
+    const fullName = document.getElementById('nama');
+    const email = document.getElementById('email');
+    const hashedPassword = document.getElementById('password');
+    const address = document.getElementById('alamat');
+    const birthOfDate = document.getElementById('tanggal');
+    const placeOfBirth = document.getElementById('lahir');
+    const gender = document.querySelector(
+      'input[type=radio][name=gender]:checked'
+    );
+    const university = document.getElementById('kampus');
+    const buttonAdd = document.getElementById('add-user');
 
-    buttonAdd.addEventListener('click', function () {
+    buttonAdd.addEventListener('click', function (e) {
+      e.preventDefault();
       const user = {
-        fullName: fullName,
-        email: email,
-        password: hashedPassword,
-        address: address,
-        birthOfDate: birthOfDate,
-        placeOfBirth: placeOfBirth,
-        gender: gender,
-        university: university,
+        fullName: fullName.value,
+        email: email.value,
+        password: hashedPassword.value,
+        address: address.value,
+        birthOfDate: birthOfDate.value,
+        placeOfBirth: placeOfBirth.value,
+        gender: gender.value,
+        university: university.value,
       };
-      addUser(user);
+      ApiSource.register(user);
     });
   });
 }

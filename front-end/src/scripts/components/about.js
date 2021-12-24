@@ -12,13 +12,11 @@ class About extends HTMLElement {
       <div class="about__container grid about__top">
         <div class="about__data">
           <h2 class="about__title section__title ">
-            Temukan Lomba & event <br />
-            Sesuai dengan Passionmu
+          Cari Lomba 
+          sesuai dengan passionmu
           </h2>
           <p class="about__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            nisi corrupti asperiores saepe eos. Cum unde quisquam totam fugiat
-            aperiam!
+          kamu bingung cari lomba dengan berbagai informasi yang ada di luar sana?, cari aja di website ini, siapa tau kamu menemukan lomba yang kamu cari loh.
           </p>
         </div>
         <img src="${heroImage1}" class="about__img home__img" alt="hero about" />
@@ -27,13 +25,10 @@ class About extends HTMLElement {
       <div class="about__container grid">
         <div class="about__data">
           <h2 class="about__title section__title ">
-            Temukan Lomba & event <br />
-            Sesuai dengan Passionmu
+            Lagi cari event?
           </h2>
           <p class="about__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            nisi corrupti asperiores saepe eos. Cum unde quisquam totam fugiat
-            aperiam!
+          kamu bisa cari event sesuai dengan passion kamu juga disini, kamu bisa menghubungi orang yang membuat event tersebut pada posternya.
           </p>
         </div>
         <img src="${heroImage2}" class="about__img__bot home__img" alt="hero about" />

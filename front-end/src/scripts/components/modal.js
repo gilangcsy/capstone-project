@@ -67,13 +67,11 @@ class Modal extends HTMLElement {
           <div class="category">
             <label class="man__label" 
               >Laki-Laki
-              <input type="radio" name="gender" />
-              <span class="checkmark"></span>
+              <input type="radio" name="gender" value="Men" checked/>
             </label>
             <label
               >Perempuan
-              <input type="radio" name="gender" value="" checked="checked" />
-              <span class="checkmark"></span>
+              <input type="radio" name="gender" value="Girl" />
             </label>
           </div>
           </div>
@@ -105,22 +103,23 @@ class Modal extends HTMLElement {
       <h2 class="modal__title">Login</h2>
       <p>Belum punya Akun ? <a href="#">Daftar disini.</a></p>
     </div>
-    <form action="#" id="modal-2-content">
+    <form action="#" class="form__login">
       <div class="user__details__login">
         <div class="input__box__login">
           <span class="details">Email</span>
-          <input type="email" placeholder="Masukkan Email" required />
+          <input type="email" name="email" placeholder="Masukkan Email" required />
         </div>
         <div class="input__box__login">
           <span class="details">Password</span>
           <input
             type="password"
+            name="password"
             placeholder="Masukkan password"
             required
           />
         </div>
       </div>
-      <a href="" class="button">Login</a>
+      <button class="button" id="button-login">Daftar</button>
     </form>
   </div>
 </div>

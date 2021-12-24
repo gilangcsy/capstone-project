@@ -1,7 +1,7 @@
 import img from '../../../public/image/event3.jpg';
 
 const lomba = (data) => `
-<div class="event__content">
+<div class="event__content swiper-slide ">
 <div class="event__img">
   <img src="${img}" alt="lomba card"/>
 </div>

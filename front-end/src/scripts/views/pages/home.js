@@ -14,7 +14,7 @@ const Home = {
   async afterRender() {
     const data = await ApiSource.getPost();
     const itemContainer = document.querySelector('.event__container');
-    data.data.forEach((item) => {
+    data.data.slice(0, 3).forEach((item) => {
       itemContainer.innerHTML += lomba(item);
     });
   },

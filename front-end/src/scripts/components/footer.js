@@ -10,23 +10,21 @@ class Footer extends HTMLElement {
       <div class="footer__content">
         <a href="#" class="footer__logo">Lombaku</a>
         <p class="footer__description">
-          Lorem, ipsum dolor. <br />
-          loren
+          Kumpulan Lomba & Event
         </p>
       </div>
 
       <div class="footer__content">
         <h3 class="footer__title">Our Services</h3>
         <ul class="footer__links">
-          <li><a href="#" class="footer__link">Pricing</a></li>
+          <li><a href="#" class="footer__link">Service</a></li>
           <li><a href="#" class="footer__link">Discounts</a></li>
           <li><a href="#" class="footer__link">Report a bug</a></li>
-          <li><a href="#" class="footer__link">Terms of Service</a></li>
         </ul>
       </div>
 
       <div class="footer__content">
-        <h3 class="footer__title">Our Comapny</h3>
+        <h3 class="footer__title">Our Comapany</h3>
         <ul class="footer__links">
           <li><a href="#" class="footer__link">Blog</a></li>
           <li><a href="#" class="footer__link">Our Mission</a></li>

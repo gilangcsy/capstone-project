@@ -5,14 +5,11 @@ class Event extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <section class="section container" id="event">
+    <section class="section container mySwiper" id="event">
     <h2 class="section__title title__lomba">Lomba & Event Populer</h2>
-
-    <div class="event__nav">
-      <span class="event__item" data-filter=".lomba">Lomba</span>
-      <span class="event__item" data-filter=".event">Event</span>
-    </div>
-    <div class="event__container grid">
+    <div class="swiper">
+      <div class="event__container grid swiper-wrapper">
+      </div>
     </div>
   </section>
           `;
