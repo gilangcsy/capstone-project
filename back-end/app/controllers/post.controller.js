@@ -56,7 +56,7 @@ exports.read = (req, res) => {
 }
 
 exports.create = (req, res) => {
-	const PostId = 'PST-' + Math.random().toString(36).substr(2, 9);
+	const PostId = 'pst-' + Math.random().toString(36).substr(2, 9);
 	const { title, description, type, category, UserId } = req.body;
 
 	const post = {
@@ -66,7 +66,7 @@ exports.create = (req, res) => {
 		description: description,
 		type: type,
 		category: category,
-		thumbnail: req.file.filename,
+		thumbnail: 'default.jpeg',
 		UserId: UserId
 	}
 
@@ -128,24 +128,16 @@ exports.update = (req, res) => {
 	Post.findByPk(id)
 		.then(result => {
 			if (result) {
-				if (req.file) {
-					const path = process.cwd() + '/uploads/images/posts/' + result.thumbnail
-					fs.unlink(path, (err) => {
-						if (err) {
-							console.error(err)
-							return
-						}
-					})
-					var postValue = {
-						title: title,
-						slug: slugify(title.toLowerCase()),
-						description: description,
-						type: type,
-						category: category,
-						UserId: UserId
-					}
+				const postValue = {
+					title: title,
+					slug: slugify(title.toLowerCase()),
+					description: description,
+					type: type,
+					category: category,
+					UserId: UserId,
+					thumbnail: 'default.jpeg',
 				}
-				Post.update(postValue || req.body, {
+				Post.update(postValue, {
 					where: {
 						id: id
 					}
