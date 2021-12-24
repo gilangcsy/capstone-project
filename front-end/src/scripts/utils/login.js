@@ -8,7 +8,6 @@ function login() {
       e.preventDefault();
       const form = new FormData(formLogin);
       const formData = Object.fromEntries(form);
-      console.log(formData);
       ApiSource.login(formData);
     });
   });

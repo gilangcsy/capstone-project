@@ -31,6 +31,3 @@ class Search extends HTMLElement {
 }
 
 customElements.define('search-bar', Search);
-
-//searchPost - searchbar
-//.search__container - charactter

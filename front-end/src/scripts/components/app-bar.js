@@ -38,6 +38,15 @@ class AppBar extends HTMLElement {
         </ul>
       </div>
 
+      <div class="menu__user">
+        <a href="#/post">
+          <div class="menu__user__wrapper">
+            <img class="img__user" src="${profil}" alt="" />
+            <p>Ayub</p>
+          </div>
+        </a>
+      </div>
+
       <div class="menu__login">
         <button class="login__btn" id="login-btn" data-micromodal-trigger="modal-2">Masuk</button>
         <button
@@ -55,7 +64,3 @@ class AppBar extends HTMLElement {
 }
 
 customElements.define('app-bar', AppBar);
-// dipake kalau user sudah login
-{
-  /* <img src="${profil}" class="nav__img" alt="profil" /> */
-}

@@ -25,6 +25,32 @@
   color: var(--firts-color-alt);
 }
 
+.img__user {
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.menu__user {
+  display: none;
+}
+.menu__user__wrapper {
+  display: flex;
+  align-items: center;
+}
+.menu__user__wrapper p {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.show__menu {
+  display: block;
+}
+.hide__menu {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .nav__menu {
     position: fixed;
