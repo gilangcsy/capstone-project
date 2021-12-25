@@ -3,6 +3,8 @@
 
 Informasi mengenai lomba antar mahasiswa sudah banyak tersebar. Namun, karena sangat banyak, menjadi tidak terkontrol dan tidak terpusat. Kami berencana membuat website yang menjadi pusat atau top of mind bagi mahasiswa dalam mencari informasi lomba, dan menginformasikan lomba yang mereka adakan. Dengan adanya website ini, mahasiswa dapat menemukan lomba sesuai dengan minat dan bakat mereka, dan panitia juga tidak bingung lagi dalam menginformasikan lomba yang akan mereka adakan.
 
+##Deploy site
+lombaku.netlify.app
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
